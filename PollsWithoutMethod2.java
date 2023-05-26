@@ -1,31 +1,54 @@
-// import java.util.Scanner;
+import java.util.Scanner;
 
 public class PollsWithoutMethod2 {
     public static void main(String[] args) {
-        // Scanner myObj = new Scanner(System.in);  // Create a Scanner object
-        // String answer = "";
-        // String[] answers = {"","", "",""};
+
+        System.out.println(">이름을 입력하세요");
+
+        Scanner myObj = new Scanner(System.in);
        
+        String name;
         
+        System.out.print("이름)");
+        name = myObj.nextLine();
+
+        String []answer = {"","","",""};
+       
         String[][] polls = {
             {"1. 문항"}, 
-            {"(1) 답항", "(2) 답항", "(3) 답항", "(4) 답항", "(5) 답항"},
+            {"(1) 답항 ", "(2) 답항 ", "(3) 답항 ", "(4) 답항 "},
             {"2. 문항"},
-            {"(1) 답항", "(2) 답항", "(3) 답항","(4) 답항", "(5) 답항"},
+            {"(1) 답항 ", "(2) 답항", "(3) 답항", "(4) 답항"},
             {"3. 문항"},
-            {"(1) 답항", "(2) 답항", "(3) 답항","(4) 답항", "(5) 답항"},
+            {"(1) 답항 ", "(2) 답항 ", "(3) 답항", "(4) 답항 "},
             {"4. 문항"},
-            {"(1) 답항", "(2) 답항", "(3) 답항","(4) 답항", "(5) 답항"}
+            {"(1) 답항 ", "(2) 답항 ", "(3) 답항 ", "(4) 답항 "}
         };
+       
+   for (int second = 0; second < polls.length; second = second + 1) 
+   {
+       for (int third = 0; third < polls[second].length; third = third + 1) 
+       {
+           System.out.print(polls[second][third]+"");
+            
+       }
+       System.out.print("답)  ");
+       answer = myObj.nextLine();
+       System.out.println();
+       
+   }
 
-    
-        for (int second=0; second < polls.length; second=second+2){
-            System.out.println(polls[second][0]);
-            {
-for (int third=1; third < polls.length; third=third+2)
-{for (int fourth=0; fourth < polls[third].length; fourth=fourth+1)
-   {System.out.print(polls[third][fourth]+",");}
-}}}
+
+ 
+  
+
+
+   System.out.println("---------------------설문 종료---------------------");
+   System.out.println();
+   System.out.println("---------------------설문 결과---------------------");
+   System.out.println();
+   
+
 
 
 
