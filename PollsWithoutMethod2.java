@@ -3,43 +3,43 @@ import java.util.Scanner;
 public class PollsWithoutMethod2 {
     public static void main(String[] args) {
 
-        System.out.println(">이름을 입력하세요");
-
         Scanner myObj = new Scanner(System.in);
-       
-        String name;
-        
-        System.out.print("이름)");
-        name = myObj.nextLine();
 
         String []answer = {"","","",""};
        
         String[][] polls = {
             {"1. 문항"}, 
-            {"(1) 답항 ", "(2) 답항 ", "(3) 답항 ", "(4) 답항 "},
-            {"2. 문항"},
-            {"(1) 답항 ", "(2) 답항", "(3) 답항", "(4) 답항"},
-            {"3. 문항"},
             {"(1) 답항 ", "(2) 답항 ", "(3) 답항", "(4) 답항 "},
+            {"2. 문항"},
+            {"(1) 답항 ", "(2) 답항 ", "(3) 답항 ", "(4) 답항 "},
+            {"3. 문항"},
+            {"(1) 답항 ", "(2) 답항 ", "(3) 답항 ", "(4) 답항 "},
             {"4. 문항"},
             {"(1) 답항 ", "(2) 답항 ", "(3) 답항 ", "(4) 답항 "}
         };
        
-   for (int second = 0; second < polls.length; second = second + 1) 
-   {
-       for (int third = 0; third < polls[second].length; third = third + 1) 
-       {
-           System.out.print(polls[second][third]+"");
-            
+        String name= "";
+        System.out.println(">이름을 입력하세요");
+        System.out.print("이름)");
+        name = myObj.nextLine();
+
+        int count = 0;
+   for (int second = 0; second < polls.length; second = second + 2) {
+    System.out.println(polls[second][0]);
+        for (int third=0; third<4; third=third+1){
+            System.out.print(polls[second+1][third]);
        }
-       System.out.print("답)  ");
-       answer = myObj.nextLine();
+       System.out.print("답) ");
+       answer[count] = myObj.nextLine();
+       count = count + 1; 
        System.out.println();
-       
    }
 
-
  
+   for (int first=0; first < answer.length; first=first+1)
+   {System.out.print(answer[first]+",");
+}
+   System.out.println();
   
 
 
