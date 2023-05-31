@@ -1,4 +1,5 @@
 package src;
+<<<<<<< HEAD
 import java.util.Scanner;
 public class MaxMins {
         // <access_modifier> <return_data_type> <method_name>( list_of_parameters)
@@ -33,11 +34,54 @@ public class MaxMins {
             MaxMins mexMins = new MaxMins();
             result = mexMins.max(first, second);    //함수에 두 변수값을 적용
             System.out.println(result); //함수에 대입한 결과값을 result로 출력
+=======
+
+import java.util.Scanner;
+
+public class MaxMins
+
+{
+    public int min(int first, int second) {
+        int min = 0;
+        try {
+
+            if (first < second) {
+                min = first;
+            }
+           else if (second > first) {
+             min = second;
+           }
+
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+        return min;
+    }
+
+    public static void main(String[] args) {
+        try {
+            int first = 0;
+            int second = 0;
+            Scanner myObj = new Scanner(System.in);
+
+           
+            first = myObj.nextInt();
+            second = myObj.nextInt();
+            MaxMins maxmins = new MaxMins();
+            int minresult = maxmins.min(first, second);
+            System.out.println("min:");
+            System.out.println(minresult);
+>>>>>>> 603a536c3dbde705f22f9a602664288593d18962
 
         } catch (Exception e) {
             // TODO: handle exception
         }
         // return 0;
+<<<<<<< HEAD
         System.out.println();
     }
+=======
+    }
+
+>>>>>>> 603a536c3dbde705f22f9a602664288593d18962
 }
