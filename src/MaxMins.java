@@ -12,7 +12,7 @@ public class MaxMins
             if (first < second) {
                 min = first;
             }
-           else if (second > first) {
+           else if (second < first) {
              min = second;
            }
 
